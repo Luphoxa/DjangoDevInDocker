@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'DjangoDevInDocker.urls'
+ROOT_URLCONF = 'DjangoTestProject.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'DjangoDevInDocker.wsgi.application'
+WSGI_APPLICATION = 'DjangoTestProject.wsgi.application'
 
 
 # Database
