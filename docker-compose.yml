@@ -1,41 +1,29 @@
-version: '2'
+version: '3'
 
 services:
-  django:
-    container_name: django_server
+  web:
     build: ./web
-    image: docker_django
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./web:/src
     ports:
       - "8000:8000"
-    stdin_open: true
-    tty: true
-    depends_on:
-      - selenium-firefox
-      - selenium-chrome
 
   selenium-hub:
-    container_name: selenium_hub
     image: selenium/hub
     ports:
       - "4444:4444"
 
   selenium-chrome:
-    container_name: selenium_chrome
     image: selenium/node-chrome
     environment:
       HUB_HOST: selenium-hub
     depends_on:
       - selenium-hub
-    privileged: true
 
   selenium-firefox:
-    container_name: selenium_firefox
     image: selenium/node-firefox
     environment:
       HUB_HOST: selenium-hub
     depends_on:
       - selenium-hub
-    privileged: true
