@@ -29,3 +29,8 @@ class SeleniumTest(TestCase):
     def test_visit_site_with_firefox(self):
         self.firefox.get('http://web:8000')
         self.assertIn('Django', self.firefox.title)
+
+    def test_visit_python_with_chrome(self):
+        self.chrome.get('http://www.python.org/')
+        self.assertIn('Python', self.chrome.title)
+
