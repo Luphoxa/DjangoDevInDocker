@@ -9,21 +9,21 @@ services:
     ports:
       - "8000:8000"
 
-  selenium-hub:
+  selenium_hub:
     image: selenium/hub
     ports:
       - "4444:4444"
 
-  selenium-chrome:
+  selenium_chrome:
     image: selenium/node-chrome
     environment:
-      HUB_HOST: selenium-hub
+      HUB_HOST: selenium_hub
     depends_on:
-      - selenium-hub
+      - selenium_hub
 
-  selenium-firefox:
+  selenium_firefox:
     image: selenium/node-firefox
     environment:
-      HUB_HOST: selenium-hub
+      HUB_HOST: selenium_hub
     depends_on:
-      - selenium-hub
+      - selenium_hub
