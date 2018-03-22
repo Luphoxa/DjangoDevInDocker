@@ -12,19 +12,20 @@ class SeleniumTest(TestCase):
             command_executor='http://selenium_hub:4444/wd/hub',
             desired_capabilities=DesiredCapabilities.CHROME
         )
-        # self.firefox = webdriver.Remote(
-            # command_executor='http://selenium_hub:4444/wd/hub',
-            # desired_capabilities=DesiredCapabilities.FIREFOX
-        # )
+        self.firefox = webdriver.Remote(
+            command_executor='http://selenium_hub:4444/wd/hub',
+            desired_capabilities=DesiredCapabilities.FIREFOX
+        )
 
-    def test_visit_extern_site_with_chrome(self):
-        self.chrome.get('https://www.google.com')
-        self.assertIn(self.chrome.title, 'Google')
+    def tearDown(self):
+        # selenium webdrivers have to be quit()ed to free the associated resources.
+        self.chrome.quit()
+        self.firefox.quit()
 
-    def test_visit_own_site_with_chrome(self):
+    def test_visit_site_with_chrome(self):
         self.chrome.get('http://web:8000')
-        self.assertIn(self.chrome.title, 'Google')
+        self.assertIn('Django', self.chrome.title)
 
-    # def test_visit_site_with_firefox(self):
-        # self.firefox.get('http://web:8000')
-        # self.assertIn(self.firefox.title, 'Django: the Web framework for perfectionists with deadlines.')
+    def test_visit_site_with_firefox(self):
+        self.firefox.get('http://web:8000')
+        self.assertIn('Django', self.firefox.title)
