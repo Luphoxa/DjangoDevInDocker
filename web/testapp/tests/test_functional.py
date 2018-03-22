@@ -34,3 +34,7 @@ class SeleniumTest(TestCase):
         self.chrome.get('http://www.python.org/')
         self.assertIn('Python', self.chrome.title)
 
+    def test_visit_python_with_firefox(self):
+        self.firefox.get('http://www.python.org/')
+        self.assertIn('Python', self.firefox.title)
+
