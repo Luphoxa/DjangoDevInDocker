@@ -1,0 +1,69 @@
+[x] docker
+[x] docker-compose
+installing and getting started with docker and docker-compose:
+https://docs.docker.com/get-started/
+(recommended: this is a little tutorial with a little python app, this is a good start to getting to know docker)
+
+[x] python
+https://automatetheboringstuff.com/
+(Optional: a book to start with python if needed)
+[x] django
+https://tutorial.djangogirls.org/en/
+(Optional: getting started with django alone first if needed)
+
+[x] selenium
+[x] selenium-grid
+https://www.seleniumhq.org/docs/07_selenium_grid.jsp
+(just for the complenteness: the selenium grid quick start tutorial. Don't do this, preferably start with the docker-selenium tutorial instead)
+
+[x] pycharm
+https://www.jetbrains.com/help/pycharm/quick-start-guide.html
+(Optional: Pycharm Quickstart Guide)
+
+[x] pycharm + django
+[x] django + selenium
+https://www.obeythetestinggoat.com/book/chapter_01.html
+
+[x] docker-compose + django
+#quickstart: compose and django
+recommended: https://docs.docker.com/compose/django/
+#recommended: using docker compose on windows in pycharm
+https://blog.jetbrains.com/pycharm/2017/08/using-docker-compose-on-windows-in-pycharm/
+#you will need this if you follow the tutorial above
+https://docs.docker.com/machine/get-started/
+#optional: more related links
+http://www.tjmaher.com/2016/07/setting-up-selenium-grid-with-chrome.html
+
+[x] docker-compose + pycharm
+#in windows, go to docker settings/ general and activate "Expose daemon o tcp://localhost:2375 without TLS"
+#tutorial on how to work within a docker container with pycharm with example
+https://blog.jetbrains.com/pycharm/2017/03/docker-compose-getting-flask-up-and-running/
+#worth looking into if  first tutorial makes problems
+https://blog.jetbrains.com/pycharm/2017/08/using-docker-compose-on-windows-in-pycharm/
+
+
+[x] docker-compose + python
+
+[x] docker-compose + selenium
+#docker-selenium general page
+https://github.com/elgalu/docker-selenium
+#recommended:how the docker-compose file will look like and some basic test code to start with
+https://github.com/SeleniumHQ/docker-selenium/wiki/Getting-Started-with-Docker-Compose
+
+[x] docker-compose + selenium + python (von lokal)
+#example project
+https://marcgibbons.com/post/selenium-in-docker/
+https://github.com/marcgibbons/django-selenium-docker
+#tutorial
+https://medium.com/zeitcode/a-simple-recipe-for-django-development-in-docker-bonus-testing-with-selenium-6a038ec19ba5
+
+[ ] docker-compose + python (lokal schreiben, im container ausführen)
+[ ] docker-compose + python + selenium (lokal schreiben, im container ausführen)
+
+#more helpful links:
+#login with code with Django:
+https://stackoverflow.com/questions/22494583/login-with-code-when-using-liveservertestcase-with-django/22497239#22497239
+#creating a docker machine with hyperv
+https://docs.docker.com/machine/drivers/hyper-v/#environment-variables-and-default-values
+#predefined gitignore for pycharm
+https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
